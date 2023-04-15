@@ -1,0 +1,2189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>Maze API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>Maze</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from random import *
+import random
+class Maze:
+    &#34;&#34;&#34;
+    Classe Labyrinthe
+    Représentation sous forme de graphe non-orienté
+    dont chaque sommet est une cellule (un tuple (l,c))
+    et dont la structure est représentée par un dictionnaire
+      - clés : sommets
+      - valeurs : ensemble des sommets voisins accessibles
+    &#34;&#34;&#34;
+    def __init__(self, height, width, empty):
+        &#34;&#34;&#34;
+        Constructeur d&#39;un labyrinthe de height cellules de haut
+        et de width cellules de large
+        Les voisinages sont initialisés à des ensembles vides
+        Remarque : dans le labyrinthe créé, chaque cellule est complètement emmurée
+        &#34;&#34;&#34;
+        self.height    = height
+        self.width     = width
+        self.neighbors = {(i, j): set() for i in range(height) for j in range(width)}
+        if empty :
+            for i in range(self.width):
+                for b in range(self.height - 1):
+                    self.neighbors[(b, i)].add((b + 1, i))
+                    self.neighbors[(b + 1, i)].add((b, i))
+            for b in range(self.height):
+                for i in range(self.width - 1):
+                    self.neighbors[(b, i)].add((b, i+1))
+                    self.neighbors[(b, i+1)].add((b, i))
+
+
+    def info(self):
+        &#34;&#34;&#34;
+        **NE PAS MODIFIER CETTE MÉTHODE**
+        Affichage des attributs d&#39;un objet &#39;Maze&#39; (fonction utile pour deboguer)
+        Retour:
+            chaîne (string): description textuelle des attributs de l&#39;objet
+        &#34;&#34;&#34;
+        txt = &#34;**Informations sur le labyrinthe**\n&#34;
+        txt += f&#34;- Dimensions de la grille : {self.height} x {self.width}\n&#34;
+        txt += &#34;- Voisinages :\n&#34;
+        txt += str(self.neighbors)+&#34;\n&#34;
+        valid = True
+        for c1 in {(i, j) for i in range(self.height) for j in range(self.width)}:
+            for c2 in self.neighbors[c1]:
+                if c1 not in self.neighbors[c2]:
+                    valid = False
+                    break
+            else:
+                continue
+            break
+        txt += &#34;- Structure cohérente\n&#34; if valid else f&#34;- Structure incohérente : {c1} X {c2}\n&#34;
+        return txt
+
+    def __str__(self):
+        &#34;&#34;&#34;
+        **NE PAS MODIFIER CETTE MÉTHODE**
+        Représentation textuelle d&#39;un objet Maze (en utilisant des caractères ascii)
+        Retour:
+             chaîne (str) : chaîne de caractères représentant le labyrinthe
+        &#34;&#34;&#34;
+        txt = &#34;&#34;
+        # Première ligne
+        txt += &#34;┏&#34;
+        for j in range(self.width-1):
+            txt += &#34;━━━┳&#34;
+        txt += &#34;━━━┓\n&#34;
+        txt += &#34;┃&#34;
+        for j in range(self.width-1):
+            txt += &#34;   ┃&#34; if (0,j+1) not in self.neighbors[(0,j)] else &#34;    &#34;
+        txt += &#34;   ┃\n&#34;
+        # Lignes normales
+        for i in range(self.height-1):
+            txt += &#34;┣&#34;
+            for j in range(self.width-1):
+                txt += &#34;━━━╋&#34; if (i+1,j) not in self.neighbors[(i,j)] else &#34;   ╋&#34;
+            txt += &#34;━━━┫\n&#34; if (i+1,self.width-1) not in self.neighbors[(i,self.width-1)] else &#34;   ┫\n&#34;
+            txt += &#34;┃&#34;
+            for j in range(self.width):
+                txt += &#34;   ┃&#34; if (i+1,j+1) not in self.neighbors[(i+1,j)] else &#34;    &#34;
+            txt += &#34;\n&#34;
+        # Bas du tableau
+        txt += &#34;┗&#34;
+        for i in range(self.width-1):
+            txt += &#34;━━━┻&#34;
+        txt += &#34;━━━┛\n&#34;
+
+        return txt
+
+    def add_wall(self, c1, c2):
+        &#34;&#34;&#34;
+        Ajoute un mur entre deux cellules voisines dans le labyrinthe.
+
+        Arguments :
+            c1 (tuple) : Coordonnée de la première cellule (ligne, colonne)
+            c2 (tuple) : Coordonnée de la deuxième cellule (ligne, colonne)
+
+        Retour :
+            Rien.
+        &#34;&#34;&#34;
+      # Facultatif : on teste si les sommets sont bien dans le labyrinthe
+        assert 0 &lt;= c1[0] &lt; self.height and \
+               0 &lt;= c1[1] &lt; self.width and \
+               0 &lt;= c2[0] &lt; self.height and \
+               0 &lt;= c2[1] &lt; self.width, \
+            f&#34;Erreur lors de l&#39;ajout d&#39;un mur entre {c1} et {c2} : les coordonnées de sont pas compatibles avec les dimensions du labyrinthe&#34;
+        # Ajout du mur
+        if c2 in self.neighbors[c1]:  # Si c2 est dans les voisines de c1
+            self.neighbors[c1].remove(c2)  # on le retire
+        if c1 in self.neighbors[c2]:  # Si c3 est dans les voisines de c2
+            self.neighbors[c2].remove(c1)  # on le retire
+
+    def remove_wall(self, c1, c2):
+        &#34;&#34;&#34;
+        Retire un mur entre deux cellules voisines dans le labyrinthe.
+
+        Arguments :
+            c1 (tuple) : Coordonnée de la première cellule (ligne, colonne)
+            c2 (tuple) : Coordonnée de la deuxième cellule (ligne, colonne)
+
+        Retour :
+            Rien
+        &#34;&#34;&#34;
+        assert 0 &lt;= c1[0] &lt; self.height and \
+               0 &lt;= c1[1] &lt; self.width and \
+               0 &lt;= c2[0] &lt; self.height and \
+               0 &lt;= c2[1] &lt; self.width, \
+            f&#34;Erreur lors de la supression d&#39;un mur entre {c1} et {c2} : les coordonnées de sont pas compatibles avec les dimensions du labyrinthe&#34;
+        if c2 not in self.neighbors[c1]:
+            self.neighbors[c1].add(c2)
+        if c1 not in self.neighbors[c2]:
+            self.neighbors[c2].add(c1)
+
+    def get_walls(self):
+        &#34;&#34;&#34;
+        Retourne une liste contenant les murs du labyrinthe.
+
+        Argument :
+            Aucun
+
+        Retour :
+          Une liste de tuples représentant les coordonnées des deux cellules séparées par un mur.
+          Exemple du tuple : ((ligne1, colonne1), (ligne2, colonne2))
+        &#34;&#34;&#34;
+        liste_murs=[]
+        for i in range (self.width):
+            for b in range (self.height-1):
+                if (b,i) not in self.neighbors[(b+1,i)]:
+                    liste_murs.append([(b,i),(b+1,i)])
+        for b in range (self.height):
+            for i in range (self.width-1):
+                if (b,i) not in self.neighbors[(b,i+1)]:
+                    liste_murs.append([(b,i),(b,i+1)])
+        return liste_murs
+
+    def fill(self):
+        &#34;&#34;&#34;
+        Enlève tous les murs du labyrinthe afin de le remplir entièrement.
+
+        Argument :
+            Aucun
+
+        Retour :
+            Rien
+        &#34;&#34;&#34;
+        for i in range(self.width):
+            for b in range(self.height - 1):
+                    self.add_wall((b, i), (b + 1, i))
+        for b in range(self.height):
+            for i in range(self.width - 1):
+                    self.add_wall((b, i), (b, i + 1))
+
+    def empty(self):
+        &#34;&#34;&#34;
+        Supprime tous les murs du labyrinthe.
+
+        Arguments :
+            Aucun
+
+        Retour :
+            Aucun
+        &#34;&#34;&#34;
+        for i in range(self.width):
+            for b in range(self.height - 1):
+                self.remove_wall((b, i), (b + 1, i))
+        for b in range(self.height):
+            for i in range(self.width - 1):
+                self.remove_wall((b, i), (b, i + 1))
+
+    def get_contiguous_cells(self,c):
+        &#34;&#34;&#34;
+        Retourne la liste des cellules contigües à la cellule c (sans s&#39;occuper des murs existants).
+
+        Argument :
+            c (tuple) : coordonnée de la cellule dont on veut connaître les voisines (ligne, colonne)
+
+        Retour :
+            liste_contigues (list) : liste des coordonnées des cellules voisines de la cellule passée en argument.
+            Cette liste peut être vide si la cellule n&#39;a pas de voisins
+        &#34;&#34;&#34;
+        liste_contigues=[]
+        if (c[0]+1,c[1]) in self.neighbors :
+            liste_contigues.append((c[0]+1,c[1]))
+        if (c[0]-1,c[1]) in self.neighbors :
+            liste_contigues.append((c[0]-1,c[1]))
+        if (c[0],c[1]+1) in self.neighbors :
+            liste_contigues.append((c[0],c[1]+1))
+        if (c[0],c[1]-1) in self.neighbors :
+            liste_contigues.append((c[0],c[1]-1))
+        return liste_contigues
+
+    def get_reachable_cells(self,c) :
+        &#34;&#34;&#34;
+        Retourne la liste des cellules accessibles (cellules contigües à c qui sont dans le voisinage de c)
+        depuis la cellule c.
+
+        Argument :
+            c (tuple) : coordonnée de la cellule dont on veut connaître les voisines (ligne, colonne)
+
+        Retour :
+            liste_accessibles : Liste de tuples représentant les coordonnées des cellules accessibles
+        &#34;&#34;&#34;
+        liste_accessibles=[]
+        voisines=self.get_contiguous_cells(c)
+        for i in range (len(voisines)):
+            if voisines[i] in self.neighbors[c]:
+                liste_accessibles.append(voisines[i])
+        return liste_accessibles
+
+    @classmethod
+    def gen_btree(self,h, w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l’algorithme de construction par arbre binaire.
+
+        Explication de l&#39;algorithme :
+        On initie un labyrinthe plein. Ensuite, pour chaque cellule, on supprime aléatoirement le mur EST ou le mur SUD,
+        attention s&#39;il y a un seul mur, supprimer ce dernier, si aucun des deux : ne rien faire.
+
+        Arguments :
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour :
+            labyrinthe : labyrinthe modifié par l&#39;algorithme de construction par arbre binaire
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty = False)
+        for cell in labyrinthe.neighbors :  #Parcours toutes les cellules du labyrinthe
+            reachable = labyrinthe.get_reachable_cells(cell)    #Cellule autour (sauf si mur)
+            contiguous = labyrinthe.get_contiguous_cells(cell)  #Cellule autour (même si mur)
+            if (cell[0]+1,cell[1]) not in reachable and (cell[0]+1,cell[1]) in contiguous :
+                if (cell[0], cell[1] + 1) not in reachable and (cell[0], cell[1] + 1) in contiguous and randint(0,1)==1:
+                    labyrinthe.remove_wall(cell,(cell[0], cell[1] + 1))
+                else :
+                    labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+        return labyrinthe
+
+    @classmethod
+    def gen_sidewinder(self, h, w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de construction de labyrinthe
+        nommé Sidewinder.
+
+        Explication de l&#39;algorithme :
+        L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;, puis de procéder ligne par ligne, de l&#39;OUEST à l&#39;EST,
+        en choisissant aléatoirement de casser le mur EST d&#39;une cellule. Pour chaque séquence de cellules voisines
+        (connectées) créée sur la ligne, on casse un mur SUD au hasard d&#39;une de ces cellules
+        (une séquence peut être constituée d&#39;une seule cellule).
+
+        Arguments:
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour:
+            labyrinthe : labyrinthe modifié par l&#39;algorithme de construction Sidewinder
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty=False)
+        for i in range(h - 1):
+            seq = []
+            for j in range(w - 1):
+                seq.append((i, j))
+                if randint(0, 1) == 1: # Pile = 1 / Face = 0
+                    labyrinthe.remove_wall((i, j), (i, j + 1))
+                else:
+                    cell = seq[randint(0, len(seq)-1)]
+                    labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+                    seq = []
+            seq.append((i, w - 1))
+            cell = seq[randint(0, len(seq)-1)]
+            labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+        for j in range(w - 1):
+            labyrinthe.remove_wall((h - 1, j), (h - 1, j + 1))
+        return labyrinthe
+
+    @classmethod
+    def gen_fusion(self,h,w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de fusion de chemins.
+
+        Explication de l&#39;algorithme :
+        L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;, puis à casser des murs au
+        hasard en évitant de créer des cycles. Puisqu&#39;un labyrinthe parfait est un arbre, et qu&#39;un arbre à n sommets a
+        exactement n-1 arêtes, il suffira d&#39;abattre n-1 murs (soit (h-1) * w + (w-1) * h si h et w désignent
+        respectivement le nombre de lignes et le nombre de colonnes). Pour éviter de créer des cycles, on utilise
+        un mécanisme de labélisation des cellules (avec des entiers). Lorsqu&#39;on casse un mur depuis une cellule,
+        le label de la cellule &#34;se propage&#34; dans la zone découverte. Mais on n&#39;ouvrira un mur que lorsque le label de
+        la cellule courante est différent du label de la cellule qui est de l&#39;autre côté du mur.
+
+        Arguments :
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour :
+            labyrinthe : labyrinthe modifié par l&#39;algorithme de fusion de chemins
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty=False)
+        label={}
+        ind=0
+        for i in labyrinthe.neighbors : # Pour toutes les cellules du labyrinthe
+            ind+=1
+            label[i]=ind
+        mur=labyrinthe.get_walls()
+        random.shuffle(mur)
+        for i in range (len(mur)):
+            if label[mur[i][0]]!=label[mur[i][1]]:
+                labyrinthe.remove_wall(mur[i][0],mur[i][1])
+                labelCellule=label[mur[i][1]]
+                for valeur in label:
+                    if label[valeur] == labelCellule :
+                        label[valeur]=label[mur[i][0]]
+        return labyrinthe
+
+    @classmethod
+    def gen_exploration(self,h,w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme d&#39;exploration exhaustive.
+
+        Explication de l&#39;algorithme :
+        L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;. On choisit une cellule au hasard dans le labyrinthe
+        pour la marquer et l&#39;ajouter dans une pile (list). Tant que cette liste n&#39;est pas vide, on prend la cellule
+        située en haut de la pile et on la retire. Si cette cellule possède des voisins qui n&#39;ont pas encore été visités
+        on la remet dans la pile. On choisit ensuite (au hasard) un de ces voisins (contigues).
+        On va alors casser le mur entre la cellule (retirée de la pile) et son voisin choisi. Enfin, on marque la
+        cellule voisine comme &#34;visitée&#34;, puis on la remet dans la pile.
+
+        Arguments :
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour :
+            labyrinthe : labyrinthe modifié par l&#39;algorithme d&#39;exploration exhaustive
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty=False)
+        visite={}
+        for i in labyrinthe.neighbors:
+            # lettre N attribué aux cellules non visités et O pour les cellules visités
+            visite[i] = &#34;N&#34;
+        init=(randint(0,h-1),randint(0,w-1)) #On choisit une cellule au hasard
+        visite[init]=&#34;O&#34;
+        pile=[init]
+        while pile!=[]: #Tant que la pile n&#39;est pas vide
+            cell=pile.pop(-1) #.pop -&gt; Enlève de la liste l&#39;élément situé à la position indiquée et le renvoie en valeur de retour
+            voisins=labyrinthe.get_contiguous_cells(cell) # Voisins (même si mûr)
+            for i in range (len(voisins)):
+                if visite[voisins[0]]==&#34;N&#34;: #Si voisin non visité
+                    voisins.append(voisins.pop(0))
+                    if cell not in pile: # Si cellule n&#39;est pas dans la pile
+                        pile.append(cell)
+                else :
+                    voisins.pop(0)
+            if voisins!=[]: #Si voisins n&#39;est pas vide
+                cellVoisine=voisins[randint(0,len(voisins)-1)]
+                labyrinthe.remove_wall(cell,cellVoisine)
+                visite[cellVoisine]=&#34;O&#34;
+                pile.append(cellVoisine)
+        return labyrinthe
+
+    @classmethod
+    def gen_wilson (self,h,w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de Wilson.
+
+        Explication de l&#39;algorithme :
+        L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;. On choisit une cellule au hasard dans le labyrinthe
+        et on la marque. Tant qu&#39;il reste des cellules non marquées : on choisit une cellule de départ au hasard, parmi
+        les cellules non marquées. Puis, on effectue une marche aléatoire jusqu’à ce qu’une cellule marquée
+        soit atteinte (en cas de boucle, si la tête du snake se mord la queue, « couper » la boucle formée
+        [autrement dit, supprimer toutes étapes depuis le précédent passage]). Enfin, on marque chaque cellule du chemin
+        et casser tous les murs rencontrés, jusqu’à la cellule marquée.
+
+        Arguments :
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour :
+            labyrinthe : labyrinthe modifié par l&#39;algorithme de Wilson
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty=False)
+        visite = []
+        for i in labyrinthe.neighbors: # Pour toutes les cellules du labyrinthe
+            visite.append(i)
+        visite.pop(randint(0, len(visite) - 1))
+        cell = visite[randint(0,len(visite)-1)]
+        parcours = [cell]
+        cellPrece=cell
+        while visite!=[]:
+            voisins = labyrinthe.get_contiguous_cells(cell)
+            if cellPrece!=cell :
+                voisins.remove(cellPrece)
+            cellPrece=cell
+            cell=voisins[randint(0,len(voisins)-1)]
+            if cell in parcours :
+                parcours = [cell]
+            elif cell not in visite:
+                for i in range (len(parcours)-1):
+                    labyrinthe.remove_wall(parcours[i],parcours[i+1])
+                    visite.remove(parcours[i])
+                labyrinthe.remove_wall(cell, parcours[-1])
+                visite.remove(parcours[-1])
+                if visite!=[]:
+                    cell = visite[randint(0, len(visite) - 1)]
+                    parcours = [cell]
+                    cellPrece=cell
+            else :
+                parcours.append(cell)
+
+        return labyrinthe
+
+    def overlay(self, content=None):
+        &#34;&#34;&#34;
+        Rendu en mode texte, sur la sortie standard, \
+        d&#39;un labyrinthe avec du contenu dans les cellules
+        Argument:
+            content (dict) : dictionnaire tq content[cell] contient le caractère à afficher au milieu de la cellule
+        Retour:
+            string
+        &#34;&#34;&#34;
+        if content is None:
+            content = {(i, j): &#39; &#39; for i in range(self.height) for j in range(self.width)}
+        else:
+            # Python &gt;=3.9
+            # content = content | {(i, j): &#39; &#39; for i in range(
+            #    self.height) for j in range(self.width) if (i,j) not in content}
+            # Python &lt;3.9
+            new_content = {(i, j): &#39; &#39; for i in range(self.height) for j in range(self.width) if (i, j) not in content}
+            content = {**content, **new_content}
+        txt = r&#34;&#34;
+        # Première ligne
+        txt += &#34;┏&#34;
+        for j in range(self.width - 1):
+            txt += &#34;━━━┳&#34;
+        txt += &#34;━━━┓\n&#34;
+        txt += &#34;┃&#34;
+        for j in range(self.width - 1):
+            txt += &#34; &#34; + content[(0, j)] + &#34; ┃&#34; if (0, j + 1) not in self.neighbors[(0, j)] else &#34; &#34; + content[
+                (0, j)] + &#34;  &#34;
+        txt += &#34; &#34; + content[(0, self.width - 1)] + &#34; ┃\n&#34;
+        # Lignes normales
+        for i in range(self.height - 1):
+            txt += &#34;┣&#34;
+            for j in range(self.width - 1):
+                txt += &#34;━━━╋&#34; if (i + 1, j) not in self.neighbors[(i, j)] else &#34;   ╋&#34;
+            txt += &#34;━━━┫\n&#34; if (i + 1, self.width - 1) not in self.neighbors[(i, self.width - 1)] else &#34;   ┫\n&#34;
+            txt += &#34;┃&#34;
+            for j in range(self.width):
+                txt += &#34; &#34; + content[(i + 1, j)] + &#34; ┃&#34; if (i + 1, j + 1) not in self.neighbors[(i + 1, j)] else &#34; &#34; + \
+                                                                                                                 content[
+                                                                                                                     (
+                                                                                                                     i + 1,
+                                                                                                                     j)] + &#34;  &#34;
+            txt += &#34;\n&#34;
+        # Bas du tableau
+        txt += &#34;┗&#34;
+        for i in range(self.width - 1):
+            txt += &#34;━━━┻&#34;
+        txt += &#34;━━━┛\n&#34;
+        return txt
+
+    def solve_dfs(self, start, stop):
+        &#34;&#34;&#34;
+        Calcule le parcours le plus court afin d&#39;atteindre la cellule stop à partir de la cellule start.
+
+        Explication de l&#39;algorithme :
+        On utilise ici un parcours en profondeur du labyrinthe. Dans l&#39;initialisation, on choisit la cellule de départ D
+        que l&#39;on place dans une pile et que l&#39;on marque. Ensuite on mémorise l&#39;élément prédécesseur de D comme étant D.
+        Tant qu&#39;il reste des cellules non marquées : on prend la première cellule (c) de la pile. Si c correspond à
+        la cellule A (ou arrivée), on met fin à l&#39;algorithme. Sinon : pour chaque voisine de c, on vérifie si elle
+        n&#39;est pas marquée pour l&#39;ajouter dans la pile et enfin mémoriser son prédecesseur comme étant c.
+
+        Arguments :
+            start (tuple): La cellule de départ
+            stop (tuple): La cellule d&#39;arrivée
+        Retour :
+            Nombre minimal de déplacements nécessaires pour aller de start à stop
+        &#34;&#34;&#34;
+        parcours=[]
+        marque=[start]
+        predecesseurs={start:start}
+        while marque!=[] :
+            cell=marque.pop(-1)
+            if cell==stop:
+                marque=[]
+            else :
+                temp=self.get_reachable_cells(cell)
+                for i in range (len(temp)):
+                    if temp[i] not in marque and temp[i]!=predecesseurs[cell]:
+                        marque.append(temp[i])
+                        predecesseurs[temp[i]]=cell
+        cell = stop
+        while cell != start:
+            parcours.append(cell)
+            cell=predecesseurs[cell]
+        return parcours
+
+    def solve_bfs (self, start, stop):
+        &#34;&#34;&#34;
+        Calcule le parcours le plus court afin d&#39;atteindre la cellule stop à partir de la cellule start. Ici, on utilise
+        un parcours en largeur, ce qui signifie que l&#39;algorithme va trouver différents chemins mais on gardera le plus
+        cours d&#39;entre eux
+
+        Arguments :
+             start (tuple) : La cellule de départ
+             stop (tuple) : La cellule d&#39;arrivée
+        Retour :
+             Nombre minimal de déplacements nécessaires pour aller de start à stop
+        &#34;&#34;&#34;
+        parcours = []
+        marque = [start]
+        predecesseurs = {start: start}
+        while marque != []:
+            cell = marque.pop(0)
+            voisins = self.get_reachable_cells(cell)
+            for i in range (len(voisins)):
+                if voisins[i] not in marque and voisins[i] != predecesseurs[cell]:
+                    marque.append(voisins[i])
+                    predecesseurs[voisins[i]] = cell
+        cell = stop
+        while cell != start:
+            parcours.append(cell)
+            cell = predecesseurs[cell]
+        return parcours
+
+    def solve_rhr(self, start, stop):
+        &#34;&#34;&#34;
+        Génère un chemin pour aller de la cellule start à la cellule stop. Ici, on utilise l&#39;algorithme de la main droite
+        qui suit la fameuse méthode pour qu&#39;une personne perdue retrouve la sortie d&#39;un labyrinthe : il faut toujours
+        longer les murs situés du côté de notre main droite.
+
+        Arguments :
+             start (tuple) : La cellule de départ
+             stop (tuple) : La cellule d&#39;arrivée
+        Retour :
+             Nombre minimal de déplacements nécessaires pour aller de start à stop
+        &#34;&#34;&#34;
+        parcours = []
+        marque = [start]
+        predecesseurs = {start: start}
+        while marque != []:
+            cell = marque.pop(0)
+            if cell==stop :
+                marque = []
+            voisins = self.get_reachable_cells(cell)
+            for i in range(len(voisins)):
+                if voisins[i] not in marque and voisins[i] != predecesseurs[cell]:
+                    marque.append(voisins[i])
+                    predecesseurs[voisins[i]] = cell
+        cell = stop
+        while cell != start:
+            parcours.append(cell)
+            cell = predecesseurs[cell]
+        return parcours
+
+    def distance_geo(self,c1, c2):
+        &#34;&#34;&#34;
+        Calcule la distance géodésique entree la cellule c1 et la cellule c2. Ici, on utilise la méthode &#34;solve_dfs&#34;
+        définie au-dessus, on calcule donc la taille du parcours le plus cours trouvée par cette dernière. Attention ici
+        on prend en compte les murs présent dans le labyrinthe !
+
+        Arguments :
+            c1 (tuple): Cellule 1
+            c2 (tuple): Cellule 2
+        Retour :
+            Nombre minimal de déplacements nécessaires pour aller de c1 à c2
+        &#34;&#34;&#34;
+        return len(self.solve_dfs(c1,c2))
+
+    def distance_man(self,c1, c2):
+        &#34;&#34;&#34;
+        Calcule la distance de Manhattan entre la cellule c1 et la cellule c2.
+
+        Explication de la distance de Manhattan :
+        La distance de Manhattan est le nombre de déplacements nécessaires pour aller de la cellule c2 à la cellule
+        c1 si le labyrinthe était vide. On définit la distance par la formule suivante :
+        d(A,B) = |xB - xA| + |yB - yA|.
+        Arguments :
+            c1 (tuple): Cellule 1
+            c2 (tuple): Cellule 2
+        Retour :
+            Nombre minimal de déplacements nécessaires pour aller de c1 à c2
+        &#34;&#34;&#34;
+        return (c2[0] - c1[0]) + (c2[1] - c1[1])</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="Maze.getrandbits"><code class="name flex">
+<span>def <span class="ident">getrandbits</span></span>(<span>k, /)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>getrandbits(k) -&gt; x.
+Generates an int with k random bits.</p></div>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="Maze.Maze"><code class="flex name class">
+<span>class <span class="ident">Maze</span></span>
+<span>(</span><span>height, width, empty)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Classe Labyrinthe
+Représentation sous forme de graphe non-orienté
+dont chaque sommet est une cellule (un tuple (l,c))
+et dont la structure est représentée par un dictionnaire
+- clés : sommets
+- valeurs : ensemble des sommets voisins accessibles</p>
+<p>Constructeur d'un labyrinthe de height cellules de haut
+et de width cellules de large
+Les voisinages sont initialisés à des ensembles vides
+Remarque : dans le labyrinthe créé, chaque cellule est complètement emmurée</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Maze:
+    &#34;&#34;&#34;
+    Classe Labyrinthe
+    Représentation sous forme de graphe non-orienté
+    dont chaque sommet est une cellule (un tuple (l,c))
+    et dont la structure est représentée par un dictionnaire
+      - clés : sommets
+      - valeurs : ensemble des sommets voisins accessibles
+    &#34;&#34;&#34;
+    def __init__(self, height, width, empty):
+        &#34;&#34;&#34;
+        Constructeur d&#39;un labyrinthe de height cellules de haut
+        et de width cellules de large
+        Les voisinages sont initialisés à des ensembles vides
+        Remarque : dans le labyrinthe créé, chaque cellule est complètement emmurée
+        &#34;&#34;&#34;
+        self.height    = height
+        self.width     = width
+        self.neighbors = {(i, j): set() for i in range(height) for j in range(width)}
+        if empty :
+            for i in range(self.width):
+                for b in range(self.height - 1):
+                    self.neighbors[(b, i)].add((b + 1, i))
+                    self.neighbors[(b + 1, i)].add((b, i))
+            for b in range(self.height):
+                for i in range(self.width - 1):
+                    self.neighbors[(b, i)].add((b, i+1))
+                    self.neighbors[(b, i+1)].add((b, i))
+
+
+    def info(self):
+        &#34;&#34;&#34;
+        **NE PAS MODIFIER CETTE MÉTHODE**
+        Affichage des attributs d&#39;un objet &#39;Maze&#39; (fonction utile pour deboguer)
+        Retour:
+            chaîne (string): description textuelle des attributs de l&#39;objet
+        &#34;&#34;&#34;
+        txt = &#34;**Informations sur le labyrinthe**\n&#34;
+        txt += f&#34;- Dimensions de la grille : {self.height} x {self.width}\n&#34;
+        txt += &#34;- Voisinages :\n&#34;
+        txt += str(self.neighbors)+&#34;\n&#34;
+        valid = True
+        for c1 in {(i, j) for i in range(self.height) for j in range(self.width)}:
+            for c2 in self.neighbors[c1]:
+                if c1 not in self.neighbors[c2]:
+                    valid = False
+                    break
+            else:
+                continue
+            break
+        txt += &#34;- Structure cohérente\n&#34; if valid else f&#34;- Structure incohérente : {c1} X {c2}\n&#34;
+        return txt
+
+    def __str__(self):
+        &#34;&#34;&#34;
+        **NE PAS MODIFIER CETTE MÉTHODE**
+        Représentation textuelle d&#39;un objet Maze (en utilisant des caractères ascii)
+        Retour:
+             chaîne (str) : chaîne de caractères représentant le labyrinthe
+        &#34;&#34;&#34;
+        txt = &#34;&#34;
+        # Première ligne
+        txt += &#34;┏&#34;
+        for j in range(self.width-1):
+            txt += &#34;━━━┳&#34;
+        txt += &#34;━━━┓\n&#34;
+        txt += &#34;┃&#34;
+        for j in range(self.width-1):
+            txt += &#34;   ┃&#34; if (0,j+1) not in self.neighbors[(0,j)] else &#34;    &#34;
+        txt += &#34;   ┃\n&#34;
+        # Lignes normales
+        for i in range(self.height-1):
+            txt += &#34;┣&#34;
+            for j in range(self.width-1):
+                txt += &#34;━━━╋&#34; if (i+1,j) not in self.neighbors[(i,j)] else &#34;   ╋&#34;
+            txt += &#34;━━━┫\n&#34; if (i+1,self.width-1) not in self.neighbors[(i,self.width-1)] else &#34;   ┫\n&#34;
+            txt += &#34;┃&#34;
+            for j in range(self.width):
+                txt += &#34;   ┃&#34; if (i+1,j+1) not in self.neighbors[(i+1,j)] else &#34;    &#34;
+            txt += &#34;\n&#34;
+        # Bas du tableau
+        txt += &#34;┗&#34;
+        for i in range(self.width-1):
+            txt += &#34;━━━┻&#34;
+        txt += &#34;━━━┛\n&#34;
+
+        return txt
+
+    def add_wall(self, c1, c2):
+        &#34;&#34;&#34;
+        Ajoute un mur entre deux cellules voisines dans le labyrinthe.
+
+        Arguments :
+            c1 (tuple) : Coordonnée de la première cellule (ligne, colonne)
+            c2 (tuple) : Coordonnée de la deuxième cellule (ligne, colonne)
+
+        Retour :
+            Rien.
+        &#34;&#34;&#34;
+      # Facultatif : on teste si les sommets sont bien dans le labyrinthe
+        assert 0 &lt;= c1[0] &lt; self.height and \
+               0 &lt;= c1[1] &lt; self.width and \
+               0 &lt;= c2[0] &lt; self.height and \
+               0 &lt;= c2[1] &lt; self.width, \
+            f&#34;Erreur lors de l&#39;ajout d&#39;un mur entre {c1} et {c2} : les coordonnées de sont pas compatibles avec les dimensions du labyrinthe&#34;
+        # Ajout du mur
+        if c2 in self.neighbors[c1]:  # Si c2 est dans les voisines de c1
+            self.neighbors[c1].remove(c2)  # on le retire
+        if c1 in self.neighbors[c2]:  # Si c3 est dans les voisines de c2
+            self.neighbors[c2].remove(c1)  # on le retire
+
+    def remove_wall(self, c1, c2):
+        &#34;&#34;&#34;
+        Retire un mur entre deux cellules voisines dans le labyrinthe.
+
+        Arguments :
+            c1 (tuple) : Coordonnée de la première cellule (ligne, colonne)
+            c2 (tuple) : Coordonnée de la deuxième cellule (ligne, colonne)
+
+        Retour :
+            Rien
+        &#34;&#34;&#34;
+        assert 0 &lt;= c1[0] &lt; self.height and \
+               0 &lt;= c1[1] &lt; self.width and \
+               0 &lt;= c2[0] &lt; self.height and \
+               0 &lt;= c2[1] &lt; self.width, \
+            f&#34;Erreur lors de la supression d&#39;un mur entre {c1} et {c2} : les coordonnées de sont pas compatibles avec les dimensions du labyrinthe&#34;
+        if c2 not in self.neighbors[c1]:
+            self.neighbors[c1].add(c2)
+        if c1 not in self.neighbors[c2]:
+            self.neighbors[c2].add(c1)
+
+    def get_walls(self):
+        &#34;&#34;&#34;
+        Retourne une liste contenant les murs du labyrinthe.
+
+        Argument :
+            Aucun
+
+        Retour :
+          Une liste de tuples représentant les coordonnées des deux cellules séparées par un mur.
+          Exemple du tuple : ((ligne1, colonne1), (ligne2, colonne2))
+        &#34;&#34;&#34;
+        liste_murs=[]
+        for i in range (self.width):
+            for b in range (self.height-1):
+                if (b,i) not in self.neighbors[(b+1,i)]:
+                    liste_murs.append([(b,i),(b+1,i)])
+        for b in range (self.height):
+            for i in range (self.width-1):
+                if (b,i) not in self.neighbors[(b,i+1)]:
+                    liste_murs.append([(b,i),(b,i+1)])
+        return liste_murs
+
+    def fill(self):
+        &#34;&#34;&#34;
+        Enlève tous les murs du labyrinthe afin de le remplir entièrement.
+
+        Argument :
+            Aucun
+
+        Retour :
+            Rien
+        &#34;&#34;&#34;
+        for i in range(self.width):
+            for b in range(self.height - 1):
+                    self.add_wall((b, i), (b + 1, i))
+        for b in range(self.height):
+            for i in range(self.width - 1):
+                    self.add_wall((b, i), (b, i + 1))
+
+    def empty(self):
+        &#34;&#34;&#34;
+        Supprime tous les murs du labyrinthe.
+
+        Arguments :
+            Aucun
+
+        Retour :
+            Aucun
+        &#34;&#34;&#34;
+        for i in range(self.width):
+            for b in range(self.height - 1):
+                self.remove_wall((b, i), (b + 1, i))
+        for b in range(self.height):
+            for i in range(self.width - 1):
+                self.remove_wall((b, i), (b, i + 1))
+
+    def get_contiguous_cells(self,c):
+        &#34;&#34;&#34;
+        Retourne la liste des cellules contigües à la cellule c (sans s&#39;occuper des murs existants).
+
+        Argument :
+            c (tuple) : coordonnée de la cellule dont on veut connaître les voisines (ligne, colonne)
+
+        Retour :
+            liste_contigues (list) : liste des coordonnées des cellules voisines de la cellule passée en argument.
+            Cette liste peut être vide si la cellule n&#39;a pas de voisins
+        &#34;&#34;&#34;
+        liste_contigues=[]
+        if (c[0]+1,c[1]) in self.neighbors :
+            liste_contigues.append((c[0]+1,c[1]))
+        if (c[0]-1,c[1]) in self.neighbors :
+            liste_contigues.append((c[0]-1,c[1]))
+        if (c[0],c[1]+1) in self.neighbors :
+            liste_contigues.append((c[0],c[1]+1))
+        if (c[0],c[1]-1) in self.neighbors :
+            liste_contigues.append((c[0],c[1]-1))
+        return liste_contigues
+
+    def get_reachable_cells(self,c) :
+        &#34;&#34;&#34;
+        Retourne la liste des cellules accessibles (cellules contigües à c qui sont dans le voisinage de c)
+        depuis la cellule c.
+
+        Argument :
+            c (tuple) : coordonnée de la cellule dont on veut connaître les voisines (ligne, colonne)
+
+        Retour :
+            liste_accessibles : Liste de tuples représentant les coordonnées des cellules accessibles
+        &#34;&#34;&#34;
+        liste_accessibles=[]
+        voisines=self.get_contiguous_cells(c)
+        for i in range (len(voisines)):
+            if voisines[i] in self.neighbors[c]:
+                liste_accessibles.append(voisines[i])
+        return liste_accessibles
+
+    @classmethod
+    def gen_btree(self,h, w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l’algorithme de construction par arbre binaire.
+
+        Explication de l&#39;algorithme :
+        On initie un labyrinthe plein. Ensuite, pour chaque cellule, on supprime aléatoirement le mur EST ou le mur SUD,
+        attention s&#39;il y a un seul mur, supprimer ce dernier, si aucun des deux : ne rien faire.
+
+        Arguments :
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour :
+            labyrinthe : labyrinthe modifié par l&#39;algorithme de construction par arbre binaire
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty = False)
+        for cell in labyrinthe.neighbors :  #Parcours toutes les cellules du labyrinthe
+            reachable = labyrinthe.get_reachable_cells(cell)    #Cellule autour (sauf si mur)
+            contiguous = labyrinthe.get_contiguous_cells(cell)  #Cellule autour (même si mur)
+            if (cell[0]+1,cell[1]) not in reachable and (cell[0]+1,cell[1]) in contiguous :
+                if (cell[0], cell[1] + 1) not in reachable and (cell[0], cell[1] + 1) in contiguous and randint(0,1)==1:
+                    labyrinthe.remove_wall(cell,(cell[0], cell[1] + 1))
+                else :
+                    labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+        return labyrinthe
+
+    @classmethod
+    def gen_sidewinder(self, h, w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de construction de labyrinthe
+        nommé Sidewinder.
+
+        Explication de l&#39;algorithme :
+        L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;, puis de procéder ligne par ligne, de l&#39;OUEST à l&#39;EST,
+        en choisissant aléatoirement de casser le mur EST d&#39;une cellule. Pour chaque séquence de cellules voisines
+        (connectées) créée sur la ligne, on casse un mur SUD au hasard d&#39;une de ces cellules
+        (une séquence peut être constituée d&#39;une seule cellule).
+
+        Arguments:
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour:
+            labyrinthe : labyrinthe modifié par l&#39;algorithme de construction Sidewinder
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty=False)
+        for i in range(h - 1):
+            seq = []
+            for j in range(w - 1):
+                seq.append((i, j))
+                if randint(0, 1) == 1: # Pile = 1 / Face = 0
+                    labyrinthe.remove_wall((i, j), (i, j + 1))
+                else:
+                    cell = seq[randint(0, len(seq)-1)]
+                    labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+                    seq = []
+            seq.append((i, w - 1))
+            cell = seq[randint(0, len(seq)-1)]
+            labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+        for j in range(w - 1):
+            labyrinthe.remove_wall((h - 1, j), (h - 1, j + 1))
+        return labyrinthe
+
+    @classmethod
+    def gen_fusion(self,h,w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de fusion de chemins.
+
+        Explication de l&#39;algorithme :
+        L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;, puis à casser des murs au
+        hasard en évitant de créer des cycles. Puisqu&#39;un labyrinthe parfait est un arbre, et qu&#39;un arbre à n sommets a
+        exactement n-1 arêtes, il suffira d&#39;abattre n-1 murs (soit (h-1) * w + (w-1) * h si h et w désignent
+        respectivement le nombre de lignes et le nombre de colonnes). Pour éviter de créer des cycles, on utilise
+        un mécanisme de labélisation des cellules (avec des entiers). Lorsqu&#39;on casse un mur depuis une cellule,
+        le label de la cellule &#34;se propage&#34; dans la zone découverte. Mais on n&#39;ouvrira un mur que lorsque le label de
+        la cellule courante est différent du label de la cellule qui est de l&#39;autre côté du mur.
+
+        Arguments :
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour :
+            labyrinthe : labyrinthe modifié par l&#39;algorithme de fusion de chemins
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty=False)
+        label={}
+        ind=0
+        for i in labyrinthe.neighbors : # Pour toutes les cellules du labyrinthe
+            ind+=1
+            label[i]=ind
+        mur=labyrinthe.get_walls()
+        random.shuffle(mur)
+        for i in range (len(mur)):
+            if label[mur[i][0]]!=label[mur[i][1]]:
+                labyrinthe.remove_wall(mur[i][0],mur[i][1])
+                labelCellule=label[mur[i][1]]
+                for valeur in label:
+                    if label[valeur] == labelCellule :
+                        label[valeur]=label[mur[i][0]]
+        return labyrinthe
+
+    @classmethod
+    def gen_exploration(self,h,w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme d&#39;exploration exhaustive.
+
+        Explication de l&#39;algorithme :
+        L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;. On choisit une cellule au hasard dans le labyrinthe
+        pour la marquer et l&#39;ajouter dans une pile (list). Tant que cette liste n&#39;est pas vide, on prend la cellule
+        située en haut de la pile et on la retire. Si cette cellule possède des voisins qui n&#39;ont pas encore été visités
+        on la remet dans la pile. On choisit ensuite (au hasard) un de ces voisins (contigues).
+        On va alors casser le mur entre la cellule (retirée de la pile) et son voisin choisi. Enfin, on marque la
+        cellule voisine comme &#34;visitée&#34;, puis on la remet dans la pile.
+
+        Arguments :
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour :
+            labyrinthe : labyrinthe modifié par l&#39;algorithme d&#39;exploration exhaustive
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty=False)
+        visite={}
+        for i in labyrinthe.neighbors:
+            # lettre N attribué aux cellules non visités et O pour les cellules visités
+            visite[i] = &#34;N&#34;
+        init=(randint(0,h-1),randint(0,w-1)) #On choisit une cellule au hasard
+        visite[init]=&#34;O&#34;
+        pile=[init]
+        while pile!=[]: #Tant que la pile n&#39;est pas vide
+            cell=pile.pop(-1) #.pop -&gt; Enlève de la liste l&#39;élément situé à la position indiquée et le renvoie en valeur de retour
+            voisins=labyrinthe.get_contiguous_cells(cell) # Voisins (même si mûr)
+            for i in range (len(voisins)):
+                if visite[voisins[0]]==&#34;N&#34;: #Si voisin non visité
+                    voisins.append(voisins.pop(0))
+                    if cell not in pile: # Si cellule n&#39;est pas dans la pile
+                        pile.append(cell)
+                else :
+                    voisins.pop(0)
+            if voisins!=[]: #Si voisins n&#39;est pas vide
+                cellVoisine=voisins[randint(0,len(voisins)-1)]
+                labyrinthe.remove_wall(cell,cellVoisine)
+                visite[cellVoisine]=&#34;O&#34;
+                pile.append(cellVoisine)
+        return labyrinthe
+
+    @classmethod
+    def gen_wilson (self,h,w):
+        &#34;&#34;&#34;
+        Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de Wilson.
+
+        Explication de l&#39;algorithme :
+        L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;. On choisit une cellule au hasard dans le labyrinthe
+        et on la marque. Tant qu&#39;il reste des cellules non marquées : on choisit une cellule de départ au hasard, parmi
+        les cellules non marquées. Puis, on effectue une marche aléatoire jusqu’à ce qu’une cellule marquée
+        soit atteinte (en cas de boucle, si la tête du snake se mord la queue, « couper » la boucle formée
+        [autrement dit, supprimer toutes étapes depuis le précédent passage]). Enfin, on marque chaque cellule du chemin
+        et casser tous les murs rencontrés, jusqu’à la cellule marquée.
+
+        Arguments :
+            h (int) : nombre de ligne(s) du labyrinthe
+            w (int) : nombre de colonne(s) du labyrinthe
+
+        Retour :
+            labyrinthe : labyrinthe modifié par l&#39;algorithme de Wilson
+        &#34;&#34;&#34;
+        labyrinthe = Maze(h, w, empty=False)
+        visite = []
+        for i in labyrinthe.neighbors: # Pour toutes les cellules du labyrinthe
+            visite.append(i)
+        visite.pop(randint(0, len(visite) - 1))
+        cell = visite[randint(0,len(visite)-1)]
+        parcours = [cell]
+        cellPrece=cell
+        while visite!=[]:
+            voisins = labyrinthe.get_contiguous_cells(cell)
+            if cellPrece!=cell :
+                voisins.remove(cellPrece)
+            cellPrece=cell
+            cell=voisins[randint(0,len(voisins)-1)]
+            if cell in parcours :
+                parcours = [cell]
+            elif cell not in visite:
+                for i in range (len(parcours)-1):
+                    labyrinthe.remove_wall(parcours[i],parcours[i+1])
+                    visite.remove(parcours[i])
+                labyrinthe.remove_wall(cell, parcours[-1])
+                visite.remove(parcours[-1])
+                if visite!=[]:
+                    cell = visite[randint(0, len(visite) - 1)]
+                    parcours = [cell]
+                    cellPrece=cell
+            else :
+                parcours.append(cell)
+
+        return labyrinthe
+
+    def overlay(self, content=None):
+        &#34;&#34;&#34;
+        Rendu en mode texte, sur la sortie standard, \
+        d&#39;un labyrinthe avec du contenu dans les cellules
+        Argument:
+            content (dict) : dictionnaire tq content[cell] contient le caractère à afficher au milieu de la cellule
+        Retour:
+            string
+        &#34;&#34;&#34;
+        if content is None:
+            content = {(i, j): &#39; &#39; for i in range(self.height) for j in range(self.width)}
+        else:
+            # Python &gt;=3.9
+            # content = content | {(i, j): &#39; &#39; for i in range(
+            #    self.height) for j in range(self.width) if (i,j) not in content}
+            # Python &lt;3.9
+            new_content = {(i, j): &#39; &#39; for i in range(self.height) for j in range(self.width) if (i, j) not in content}
+            content = {**content, **new_content}
+        txt = r&#34;&#34;
+        # Première ligne
+        txt += &#34;┏&#34;
+        for j in range(self.width - 1):
+            txt += &#34;━━━┳&#34;
+        txt += &#34;━━━┓\n&#34;
+        txt += &#34;┃&#34;
+        for j in range(self.width - 1):
+            txt += &#34; &#34; + content[(0, j)] + &#34; ┃&#34; if (0, j + 1) not in self.neighbors[(0, j)] else &#34; &#34; + content[
+                (0, j)] + &#34;  &#34;
+        txt += &#34; &#34; + content[(0, self.width - 1)] + &#34; ┃\n&#34;
+        # Lignes normales
+        for i in range(self.height - 1):
+            txt += &#34;┣&#34;
+            for j in range(self.width - 1):
+                txt += &#34;━━━╋&#34; if (i + 1, j) not in self.neighbors[(i, j)] else &#34;   ╋&#34;
+            txt += &#34;━━━┫\n&#34; if (i + 1, self.width - 1) not in self.neighbors[(i, self.width - 1)] else &#34;   ┫\n&#34;
+            txt += &#34;┃&#34;
+            for j in range(self.width):
+                txt += &#34; &#34; + content[(i + 1, j)] + &#34; ┃&#34; if (i + 1, j + 1) not in self.neighbors[(i + 1, j)] else &#34; &#34; + \
+                                                                                                                 content[
+                                                                                                                     (
+                                                                                                                     i + 1,
+                                                                                                                     j)] + &#34;  &#34;
+            txt += &#34;\n&#34;
+        # Bas du tableau
+        txt += &#34;┗&#34;
+        for i in range(self.width - 1):
+            txt += &#34;━━━┻&#34;
+        txt += &#34;━━━┛\n&#34;
+        return txt
+
+    def solve_dfs(self, start, stop):
+        &#34;&#34;&#34;
+        Calcule le parcours le plus court afin d&#39;atteindre la cellule stop à partir de la cellule start.
+
+        Explication de l&#39;algorithme :
+        On utilise ici un parcours en profondeur du labyrinthe. Dans l&#39;initialisation, on choisit la cellule de départ D
+        que l&#39;on place dans une pile et que l&#39;on marque. Ensuite on mémorise l&#39;élément prédécesseur de D comme étant D.
+        Tant qu&#39;il reste des cellules non marquées : on prend la première cellule (c) de la pile. Si c correspond à
+        la cellule A (ou arrivée), on met fin à l&#39;algorithme. Sinon : pour chaque voisine de c, on vérifie si elle
+        n&#39;est pas marquée pour l&#39;ajouter dans la pile et enfin mémoriser son prédecesseur comme étant c.
+
+        Arguments :
+            start (tuple): La cellule de départ
+            stop (tuple): La cellule d&#39;arrivée
+        Retour :
+            Nombre minimal de déplacements nécessaires pour aller de start à stop
+        &#34;&#34;&#34;
+        parcours=[]
+        marque=[start]
+        predecesseurs={start:start}
+        while marque!=[] :
+            cell=marque.pop(-1)
+            if cell==stop:
+                marque=[]
+            else :
+                temp=self.get_reachable_cells(cell)
+                for i in range (len(temp)):
+                    if temp[i] not in marque and temp[i]!=predecesseurs[cell]:
+                        marque.append(temp[i])
+                        predecesseurs[temp[i]]=cell
+        cell = stop
+        while cell != start:
+            parcours.append(cell)
+            cell=predecesseurs[cell]
+        return parcours
+
+    def solve_bfs (self, start, stop):
+        &#34;&#34;&#34;
+        Calcule le parcours le plus court afin d&#39;atteindre la cellule stop à partir de la cellule start. Ici, on utilise
+        un parcours en largeur, ce qui signifie que l&#39;algorithme va trouver différents chemins mais on gardera le plus
+        cours d&#39;entre eux
+
+        Arguments :
+             start (tuple) : La cellule de départ
+             stop (tuple) : La cellule d&#39;arrivée
+        Retour :
+             Nombre minimal de déplacements nécessaires pour aller de start à stop
+        &#34;&#34;&#34;
+        parcours = []
+        marque = [start]
+        predecesseurs = {start: start}
+        while marque != []:
+            cell = marque.pop(0)
+            voisins = self.get_reachable_cells(cell)
+            for i in range (len(voisins)):
+                if voisins[i] not in marque and voisins[i] != predecesseurs[cell]:
+                    marque.append(voisins[i])
+                    predecesseurs[voisins[i]] = cell
+        cell = stop
+        while cell != start:
+            parcours.append(cell)
+            cell = predecesseurs[cell]
+        return parcours
+
+    def solve_rhr(self, start, stop):
+        &#34;&#34;&#34;
+        Génère un chemin pour aller de la cellule start à la cellule stop. Ici, on utilise l&#39;algorithme de la main droite
+        qui suit la fameuse méthode pour qu&#39;une personne perdue retrouve la sortie d&#39;un labyrinthe : il faut toujours
+        longer les murs situés du côté de notre main droite.
+
+        Arguments :
+             start (tuple) : La cellule de départ
+             stop (tuple) : La cellule d&#39;arrivée
+        Retour :
+             Nombre minimal de déplacements nécessaires pour aller de start à stop
+        &#34;&#34;&#34;
+        parcours = []
+        marque = [start]
+        predecesseurs = {start: start}
+        while marque != []:
+            cell = marque.pop(0)
+            if cell==stop :
+                marque = []
+            voisins = self.get_reachable_cells(cell)
+            for i in range(len(voisins)):
+                if voisins[i] not in marque and voisins[i] != predecesseurs[cell]:
+                    marque.append(voisins[i])
+                    predecesseurs[voisins[i]] = cell
+        cell = stop
+        while cell != start:
+            parcours.append(cell)
+            cell = predecesseurs[cell]
+        return parcours
+
+    def distance_geo(self,c1, c2):
+        &#34;&#34;&#34;
+        Calcule la distance géodésique entree la cellule c1 et la cellule c2. Ici, on utilise la méthode &#34;solve_dfs&#34;
+        définie au-dessus, on calcule donc la taille du parcours le plus cours trouvée par cette dernière. Attention ici
+        on prend en compte les murs présent dans le labyrinthe !
+
+        Arguments :
+            c1 (tuple): Cellule 1
+            c2 (tuple): Cellule 2
+        Retour :
+            Nombre minimal de déplacements nécessaires pour aller de c1 à c2
+        &#34;&#34;&#34;
+        return len(self.solve_dfs(c1,c2))
+
+    def distance_man(self,c1, c2):
+        &#34;&#34;&#34;
+        Calcule la distance de Manhattan entre la cellule c1 et la cellule c2.
+
+        Explication de la distance de Manhattan :
+        La distance de Manhattan est le nombre de déplacements nécessaires pour aller de la cellule c2 à la cellule
+        c1 si le labyrinthe était vide. On définit la distance par la formule suivante :
+        d(A,B) = |xB - xA| + |yB - yA|.
+        Arguments :
+            c1 (tuple): Cellule 1
+            c2 (tuple): Cellule 2
+        Retour :
+            Nombre minimal de déplacements nécessaires pour aller de c1 à c2
+        &#34;&#34;&#34;
+        return (c2[0] - c1[0]) + (c2[1] - c1[1])</code></pre>
+</details>
+<h3>Static methods</h3>
+<dl>
+<dt id="Maze.Maze.gen_btree"><code class="name flex">
+<span>def <span class="ident">gen_btree</span></span>(<span>h, w)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Génère un labyrinthe à h lignes et w colonnes en utilisant l’algorithme de construction par arbre binaire.</p>
+<p>Explication de l'algorithme :
+On initie un labyrinthe plein. Ensuite, pour chaque cellule, on supprime aléatoirement le mur EST ou le mur SUD,
+attention s'il y a un seul mur, supprimer ce dernier, si aucun des deux : ne rien faire.</p>
+<p>Arguments :
+h (int) : nombre de ligne(s) du labyrinthe
+w (int) : nombre de colonne(s) du labyrinthe</p>
+<p>Retour :
+labyrinthe : labyrinthe modifié par l'algorithme de construction par arbre binaire</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def gen_btree(self,h, w):
+    &#34;&#34;&#34;
+    Génère un labyrinthe à h lignes et w colonnes en utilisant l’algorithme de construction par arbre binaire.
+
+    Explication de l&#39;algorithme :
+    On initie un labyrinthe plein. Ensuite, pour chaque cellule, on supprime aléatoirement le mur EST ou le mur SUD,
+    attention s&#39;il y a un seul mur, supprimer ce dernier, si aucun des deux : ne rien faire.
+
+    Arguments :
+        h (int) : nombre de ligne(s) du labyrinthe
+        w (int) : nombre de colonne(s) du labyrinthe
+
+    Retour :
+        labyrinthe : labyrinthe modifié par l&#39;algorithme de construction par arbre binaire
+    &#34;&#34;&#34;
+    labyrinthe = Maze(h, w, empty = False)
+    for cell in labyrinthe.neighbors :  #Parcours toutes les cellules du labyrinthe
+        reachable = labyrinthe.get_reachable_cells(cell)    #Cellule autour (sauf si mur)
+        contiguous = labyrinthe.get_contiguous_cells(cell)  #Cellule autour (même si mur)
+        if (cell[0]+1,cell[1]) not in reachable and (cell[0]+1,cell[1]) in contiguous :
+            if (cell[0], cell[1] + 1) not in reachable and (cell[0], cell[1] + 1) in contiguous and randint(0,1)==1:
+                labyrinthe.remove_wall(cell,(cell[0], cell[1] + 1))
+            else :
+                labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+    return labyrinthe</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.gen_exploration"><code class="name flex">
+<span>def <span class="ident">gen_exploration</span></span>(<span>h, w)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Génère un labyrinthe à h lignes et w colonnes en utilisant l'algorithme d'exploration exhaustive.</p>
+<p>Explication de l'algorithme :
+L'algorithme consiste à partir d'un labyrinthe "plein". On choisit une cellule au hasard dans le labyrinthe
+pour la marquer et l'ajouter dans une pile (list). Tant que cette liste n'est pas vide, on prend la cellule
+située en haut de la pile et on la retire. Si cette cellule possède des voisins qui n'ont pas encore été visités
+on la remet dans la pile. On choisit ensuite (au hasard) un de ces voisins (contigues).
+On va alors casser le mur entre la cellule (retirée de la pile) et son voisin choisi. Enfin, on marque la
+cellule voisine comme "visitée", puis on la remet dans la pile.</p>
+<p>Arguments :
+h (int) : nombre de ligne(s) du labyrinthe
+w (int) : nombre de colonne(s) du labyrinthe</p>
+<p>Retour :
+labyrinthe : labyrinthe modifié par l'algorithme d'exploration exhaustive</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def gen_exploration(self,h,w):
+    &#34;&#34;&#34;
+    Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme d&#39;exploration exhaustive.
+
+    Explication de l&#39;algorithme :
+    L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;. On choisit une cellule au hasard dans le labyrinthe
+    pour la marquer et l&#39;ajouter dans une pile (list). Tant que cette liste n&#39;est pas vide, on prend la cellule
+    située en haut de la pile et on la retire. Si cette cellule possède des voisins qui n&#39;ont pas encore été visités
+    on la remet dans la pile. On choisit ensuite (au hasard) un de ces voisins (contigues).
+    On va alors casser le mur entre la cellule (retirée de la pile) et son voisin choisi. Enfin, on marque la
+    cellule voisine comme &#34;visitée&#34;, puis on la remet dans la pile.
+
+    Arguments :
+        h (int) : nombre de ligne(s) du labyrinthe
+        w (int) : nombre de colonne(s) du labyrinthe
+
+    Retour :
+        labyrinthe : labyrinthe modifié par l&#39;algorithme d&#39;exploration exhaustive
+    &#34;&#34;&#34;
+    labyrinthe = Maze(h, w, empty=False)
+    visite={}
+    for i in labyrinthe.neighbors:
+        # lettre N attribué aux cellules non visités et O pour les cellules visités
+        visite[i] = &#34;N&#34;
+    init=(randint(0,h-1),randint(0,w-1)) #On choisit une cellule au hasard
+    visite[init]=&#34;O&#34;
+    pile=[init]
+    while pile!=[]: #Tant que la pile n&#39;est pas vide
+        cell=pile.pop(-1) #.pop -&gt; Enlève de la liste l&#39;élément situé à la position indiquée et le renvoie en valeur de retour
+        voisins=labyrinthe.get_contiguous_cells(cell) # Voisins (même si mûr)
+        for i in range (len(voisins)):
+            if visite[voisins[0]]==&#34;N&#34;: #Si voisin non visité
+                voisins.append(voisins.pop(0))
+                if cell not in pile: # Si cellule n&#39;est pas dans la pile
+                    pile.append(cell)
+            else :
+                voisins.pop(0)
+        if voisins!=[]: #Si voisins n&#39;est pas vide
+            cellVoisine=voisins[randint(0,len(voisins)-1)]
+            labyrinthe.remove_wall(cell,cellVoisine)
+            visite[cellVoisine]=&#34;O&#34;
+            pile.append(cellVoisine)
+    return labyrinthe</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.gen_fusion"><code class="name flex">
+<span>def <span class="ident">gen_fusion</span></span>(<span>h, w)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Génère un labyrinthe à h lignes et w colonnes en utilisant l'algorithme de fusion de chemins.</p>
+<p>Explication de l'algorithme :
+L'algorithme consiste à partir d'un labyrinthe "plein", puis à casser des murs au
+hasard en évitant de créer des cycles. Puisqu'un labyrinthe parfait est un arbre, et qu'un arbre à n sommets a
+exactement n-1 arêtes, il suffira d'abattre n-1 murs (soit (h-1) * w + (w-1) * h si h et w désignent
+respectivement le nombre de lignes et le nombre de colonnes). Pour éviter de créer des cycles, on utilise
+un mécanisme de labélisation des cellules (avec des entiers). Lorsqu'on casse un mur depuis une cellule,
+le label de la cellule "se propage" dans la zone découverte. Mais on n'ouvrira un mur que lorsque le label de
+la cellule courante est différent du label de la cellule qui est de l'autre côté du mur.</p>
+<p>Arguments :
+h (int) : nombre de ligne(s) du labyrinthe
+w (int) : nombre de colonne(s) du labyrinthe</p>
+<p>Retour :
+labyrinthe : labyrinthe modifié par l'algorithme de fusion de chemins</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def gen_fusion(self,h,w):
+    &#34;&#34;&#34;
+    Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de fusion de chemins.
+
+    Explication de l&#39;algorithme :
+    L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;, puis à casser des murs au
+    hasard en évitant de créer des cycles. Puisqu&#39;un labyrinthe parfait est un arbre, et qu&#39;un arbre à n sommets a
+    exactement n-1 arêtes, il suffira d&#39;abattre n-1 murs (soit (h-1) * w + (w-1) * h si h et w désignent
+    respectivement le nombre de lignes et le nombre de colonnes). Pour éviter de créer des cycles, on utilise
+    un mécanisme de labélisation des cellules (avec des entiers). Lorsqu&#39;on casse un mur depuis une cellule,
+    le label de la cellule &#34;se propage&#34; dans la zone découverte. Mais on n&#39;ouvrira un mur que lorsque le label de
+    la cellule courante est différent du label de la cellule qui est de l&#39;autre côté du mur.
+
+    Arguments :
+        h (int) : nombre de ligne(s) du labyrinthe
+        w (int) : nombre de colonne(s) du labyrinthe
+
+    Retour :
+        labyrinthe : labyrinthe modifié par l&#39;algorithme de fusion de chemins
+    &#34;&#34;&#34;
+    labyrinthe = Maze(h, w, empty=False)
+    label={}
+    ind=0
+    for i in labyrinthe.neighbors : # Pour toutes les cellules du labyrinthe
+        ind+=1
+        label[i]=ind
+    mur=labyrinthe.get_walls()
+    random.shuffle(mur)
+    for i in range (len(mur)):
+        if label[mur[i][0]]!=label[mur[i][1]]:
+            labyrinthe.remove_wall(mur[i][0],mur[i][1])
+            labelCellule=label[mur[i][1]]
+            for valeur in label:
+                if label[valeur] == labelCellule :
+                    label[valeur]=label[mur[i][0]]
+    return labyrinthe</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.gen_sidewinder"><code class="name flex">
+<span>def <span class="ident">gen_sidewinder</span></span>(<span>h, w)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Génère un labyrinthe à h lignes et w colonnes en utilisant l'algorithme de construction de labyrinthe
+nommé Sidewinder.</p>
+<p>Explication de l'algorithme :
+L'algorithme consiste à partir d'un labyrinthe "plein", puis de procéder ligne par ligne, de l'OUEST à l'EST,
+en choisissant aléatoirement de casser le mur EST d'une cellule. Pour chaque séquence de cellules voisines
+(connectées) créée sur la ligne, on casse un mur SUD au hasard d'une de ces cellules
+(une séquence peut être constituée d'une seule cellule).</p>
+<h2 id="arguments">Arguments</h2>
+<p>h (int) : nombre de ligne(s) du labyrinthe
+w (int) : nombre de colonne(s) du labyrinthe</p>
+<h2 id="retour">Retour</h2>
+<p>labyrinthe : labyrinthe modifié par l'algorithme de construction Sidewinder</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def gen_sidewinder(self, h, w):
+    &#34;&#34;&#34;
+    Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de construction de labyrinthe
+    nommé Sidewinder.
+
+    Explication de l&#39;algorithme :
+    L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;, puis de procéder ligne par ligne, de l&#39;OUEST à l&#39;EST,
+    en choisissant aléatoirement de casser le mur EST d&#39;une cellule. Pour chaque séquence de cellules voisines
+    (connectées) créée sur la ligne, on casse un mur SUD au hasard d&#39;une de ces cellules
+    (une séquence peut être constituée d&#39;une seule cellule).
+
+    Arguments:
+        h (int) : nombre de ligne(s) du labyrinthe
+        w (int) : nombre de colonne(s) du labyrinthe
+
+    Retour:
+        labyrinthe : labyrinthe modifié par l&#39;algorithme de construction Sidewinder
+    &#34;&#34;&#34;
+    labyrinthe = Maze(h, w, empty=False)
+    for i in range(h - 1):
+        seq = []
+        for j in range(w - 1):
+            seq.append((i, j))
+            if randint(0, 1) == 1: # Pile = 1 / Face = 0
+                labyrinthe.remove_wall((i, j), (i, j + 1))
+            else:
+                cell = seq[randint(0, len(seq)-1)]
+                labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+                seq = []
+        seq.append((i, w - 1))
+        cell = seq[randint(0, len(seq)-1)]
+        labyrinthe.remove_wall(cell, (cell[0] + 1, cell[1]))
+    for j in range(w - 1):
+        labyrinthe.remove_wall((h - 1, j), (h - 1, j + 1))
+    return labyrinthe</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.gen_wilson"><code class="name flex">
+<span>def <span class="ident">gen_wilson</span></span>(<span>h, w)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Génère un labyrinthe à h lignes et w colonnes en utilisant l'algorithme de Wilson.</p>
+<p>Explication de l'algorithme :
+L'algorithme consiste à partir d'un labyrinthe "plein". On choisit une cellule au hasard dans le labyrinthe
+et on la marque. Tant qu'il reste des cellules non marquées : on choisit une cellule de départ au hasard, parmi
+les cellules non marquées. Puis, on effectue une marche aléatoire jusqu’à ce qu’une cellule marquée
+soit atteinte (en cas de boucle, si la tête du snake se mord la queue, « couper » la boucle formée
+[autrement dit, supprimer toutes étapes depuis le précédent passage]). Enfin, on marque chaque cellule du chemin
+et casser tous les murs rencontrés, jusqu’à la cellule marquée.</p>
+<p>Arguments :
+h (int) : nombre de ligne(s) du labyrinthe
+w (int) : nombre de colonne(s) du labyrinthe</p>
+<p>Retour :
+labyrinthe : labyrinthe modifié par l'algorithme de Wilson</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def gen_wilson (self,h,w):
+    &#34;&#34;&#34;
+    Génère un labyrinthe à h lignes et w colonnes en utilisant l&#39;algorithme de Wilson.
+
+    Explication de l&#39;algorithme :
+    L&#39;algorithme consiste à partir d&#39;un labyrinthe &#34;plein&#34;. On choisit une cellule au hasard dans le labyrinthe
+    et on la marque. Tant qu&#39;il reste des cellules non marquées : on choisit une cellule de départ au hasard, parmi
+    les cellules non marquées. Puis, on effectue une marche aléatoire jusqu’à ce qu’une cellule marquée
+    soit atteinte (en cas de boucle, si la tête du snake se mord la queue, « couper » la boucle formée
+    [autrement dit, supprimer toutes étapes depuis le précédent passage]). Enfin, on marque chaque cellule du chemin
+    et casser tous les murs rencontrés, jusqu’à la cellule marquée.
+
+    Arguments :
+        h (int) : nombre de ligne(s) du labyrinthe
+        w (int) : nombre de colonne(s) du labyrinthe
+
+    Retour :
+        labyrinthe : labyrinthe modifié par l&#39;algorithme de Wilson
+    &#34;&#34;&#34;
+    labyrinthe = Maze(h, w, empty=False)
+    visite = []
+    for i in labyrinthe.neighbors: # Pour toutes les cellules du labyrinthe
+        visite.append(i)
+    visite.pop(randint(0, len(visite) - 1))
+    cell = visite[randint(0,len(visite)-1)]
+    parcours = [cell]
+    cellPrece=cell
+    while visite!=[]:
+        voisins = labyrinthe.get_contiguous_cells(cell)
+        if cellPrece!=cell :
+            voisins.remove(cellPrece)
+        cellPrece=cell
+        cell=voisins[randint(0,len(voisins)-1)]
+        if cell in parcours :
+            parcours = [cell]
+        elif cell not in visite:
+            for i in range (len(parcours)-1):
+                labyrinthe.remove_wall(parcours[i],parcours[i+1])
+                visite.remove(parcours[i])
+            labyrinthe.remove_wall(cell, parcours[-1])
+            visite.remove(parcours[-1])
+            if visite!=[]:
+                cell = visite[randint(0, len(visite) - 1)]
+                parcours = [cell]
+                cellPrece=cell
+        else :
+            parcours.append(cell)
+
+    return labyrinthe</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="Maze.Maze.add_wall"><code class="name flex">
+<span>def <span class="ident">add_wall</span></span>(<span>self, c1, c2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ajoute un mur entre deux cellules voisines dans le labyrinthe.</p>
+<p>Arguments :
+c1 (tuple) : Coordonnée de la première cellule (ligne, colonne)
+c2 (tuple) : Coordonnée de la deuxième cellule (ligne, colonne)</p>
+<p>Retour :
+Rien.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_wall(self, c1, c2):
+    &#34;&#34;&#34;
+    Ajoute un mur entre deux cellules voisines dans le labyrinthe.
+
+    Arguments :
+        c1 (tuple) : Coordonnée de la première cellule (ligne, colonne)
+        c2 (tuple) : Coordonnée de la deuxième cellule (ligne, colonne)
+
+    Retour :
+        Rien.
+    &#34;&#34;&#34;
+  # Facultatif : on teste si les sommets sont bien dans le labyrinthe
+    assert 0 &lt;= c1[0] &lt; self.height and \
+           0 &lt;= c1[1] &lt; self.width and \
+           0 &lt;= c2[0] &lt; self.height and \
+           0 &lt;= c2[1] &lt; self.width, \
+        f&#34;Erreur lors de l&#39;ajout d&#39;un mur entre {c1} et {c2} : les coordonnées de sont pas compatibles avec les dimensions du labyrinthe&#34;
+    # Ajout du mur
+    if c2 in self.neighbors[c1]:  # Si c2 est dans les voisines de c1
+        self.neighbors[c1].remove(c2)  # on le retire
+    if c1 in self.neighbors[c2]:  # Si c3 est dans les voisines de c2
+        self.neighbors[c2].remove(c1)  # on le retire</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.distance_geo"><code class="name flex">
+<span>def <span class="ident">distance_geo</span></span>(<span>self, c1, c2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcule la distance géodésique entree la cellule c1 et la cellule c2. Ici, on utilise la méthode "solve_dfs"
+définie au-dessus, on calcule donc la taille du parcours le plus cours trouvée par cette dernière. Attention ici
+on prend en compte les murs présent dans le labyrinthe !</p>
+<p>Arguments :
+c1 (tuple): Cellule 1
+c2 (tuple): Cellule 2
+Retour :
+Nombre minimal de déplacements nécessaires pour aller de c1 à c2</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def distance_geo(self,c1, c2):
+    &#34;&#34;&#34;
+    Calcule la distance géodésique entree la cellule c1 et la cellule c2. Ici, on utilise la méthode &#34;solve_dfs&#34;
+    définie au-dessus, on calcule donc la taille du parcours le plus cours trouvée par cette dernière. Attention ici
+    on prend en compte les murs présent dans le labyrinthe !
+
+    Arguments :
+        c1 (tuple): Cellule 1
+        c2 (tuple): Cellule 2
+    Retour :
+        Nombre minimal de déplacements nécessaires pour aller de c1 à c2
+    &#34;&#34;&#34;
+    return len(self.solve_dfs(c1,c2))</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.distance_man"><code class="name flex">
+<span>def <span class="ident">distance_man</span></span>(<span>self, c1, c2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcule la distance de Manhattan entre la cellule c1 et la cellule c2.</p>
+<p>Explication de la distance de Manhattan :
+La distance de Manhattan est le nombre de déplacements nécessaires pour aller de la cellule c2 à la cellule
+c1 si le labyrinthe était vide. On définit la distance par la formule suivante :
+d(A,B) = |xB - xA| + |yB - yA|.
+Arguments :
+c1 (tuple): Cellule 1
+c2 (tuple): Cellule 2
+Retour :
+Nombre minimal de déplacements nécessaires pour aller de c1 à c2</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def distance_man(self,c1, c2):
+    &#34;&#34;&#34;
+    Calcule la distance de Manhattan entre la cellule c1 et la cellule c2.
+
+    Explication de la distance de Manhattan :
+    La distance de Manhattan est le nombre de déplacements nécessaires pour aller de la cellule c2 à la cellule
+    c1 si le labyrinthe était vide. On définit la distance par la formule suivante :
+    d(A,B) = |xB - xA| + |yB - yA|.
+    Arguments :
+        c1 (tuple): Cellule 1
+        c2 (tuple): Cellule 2
+    Retour :
+        Nombre minimal de déplacements nécessaires pour aller de c1 à c2
+    &#34;&#34;&#34;
+    return (c2[0] - c1[0]) + (c2[1] - c1[1])</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.empty"><code class="name flex">
+<span>def <span class="ident">empty</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Supprime tous les murs du labyrinthe.</p>
+<p>Arguments :
+Aucun</p>
+<p>Retour :
+Aucun</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def empty(self):
+    &#34;&#34;&#34;
+    Supprime tous les murs du labyrinthe.
+
+    Arguments :
+        Aucun
+
+    Retour :
+        Aucun
+    &#34;&#34;&#34;
+    for i in range(self.width):
+        for b in range(self.height - 1):
+            self.remove_wall((b, i), (b + 1, i))
+    for b in range(self.height):
+        for i in range(self.width - 1):
+            self.remove_wall((b, i), (b, i + 1))</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.fill"><code class="name flex">
+<span>def <span class="ident">fill</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Enlève tous les murs du labyrinthe afin de le remplir entièrement.</p>
+<p>Argument :
+Aucun</p>
+<p>Retour :
+Rien</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fill(self):
+    &#34;&#34;&#34;
+    Enlève tous les murs du labyrinthe afin de le remplir entièrement.
+
+    Argument :
+        Aucun
+
+    Retour :
+        Rien
+    &#34;&#34;&#34;
+    for i in range(self.width):
+        for b in range(self.height - 1):
+                self.add_wall((b, i), (b + 1, i))
+    for b in range(self.height):
+        for i in range(self.width - 1):
+                self.add_wall((b, i), (b, i + 1))</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.get_contiguous_cells"><code class="name flex">
+<span>def <span class="ident">get_contiguous_cells</span></span>(<span>self, c)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retourne la liste des cellules contigües à la cellule c (sans s'occuper des murs existants).</p>
+<p>Argument :
+c (tuple) : coordonnée de la cellule dont on veut connaître les voisines (ligne, colonne)</p>
+<p>Retour :
+liste_contigues (list) : liste des coordonnées des cellules voisines de la cellule passée en argument.
+Cette liste peut être vide si la cellule n'a pas de voisins</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_contiguous_cells(self,c):
+    &#34;&#34;&#34;
+    Retourne la liste des cellules contigües à la cellule c (sans s&#39;occuper des murs existants).
+
+    Argument :
+        c (tuple) : coordonnée de la cellule dont on veut connaître les voisines (ligne, colonne)
+
+    Retour :
+        liste_contigues (list) : liste des coordonnées des cellules voisines de la cellule passée en argument.
+        Cette liste peut être vide si la cellule n&#39;a pas de voisins
+    &#34;&#34;&#34;
+    liste_contigues=[]
+    if (c[0]+1,c[1]) in self.neighbors :
+        liste_contigues.append((c[0]+1,c[1]))
+    if (c[0]-1,c[1]) in self.neighbors :
+        liste_contigues.append((c[0]-1,c[1]))
+    if (c[0],c[1]+1) in self.neighbors :
+        liste_contigues.append((c[0],c[1]+1))
+    if (c[0],c[1]-1) in self.neighbors :
+        liste_contigues.append((c[0],c[1]-1))
+    return liste_contigues</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.get_reachable_cells"><code class="name flex">
+<span>def <span class="ident">get_reachable_cells</span></span>(<span>self, c)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retourne la liste des cellules accessibles (cellules contigües à c qui sont dans le voisinage de c)
+depuis la cellule c.</p>
+<p>Argument :
+c (tuple) : coordonnée de la cellule dont on veut connaître les voisines (ligne, colonne)</p>
+<p>Retour :
+liste_accessibles : Liste de tuples représentant les coordonnées des cellules accessibles</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_reachable_cells(self,c) :
+    &#34;&#34;&#34;
+    Retourne la liste des cellules accessibles (cellules contigües à c qui sont dans le voisinage de c)
+    depuis la cellule c.
+
+    Argument :
+        c (tuple) : coordonnée de la cellule dont on veut connaître les voisines (ligne, colonne)
+
+    Retour :
+        liste_accessibles : Liste de tuples représentant les coordonnées des cellules accessibles
+    &#34;&#34;&#34;
+    liste_accessibles=[]
+    voisines=self.get_contiguous_cells(c)
+    for i in range (len(voisines)):
+        if voisines[i] in self.neighbors[c]:
+            liste_accessibles.append(voisines[i])
+    return liste_accessibles</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.get_walls"><code class="name flex">
+<span>def <span class="ident">get_walls</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retourne une liste contenant les murs du labyrinthe.</p>
+<p>Argument :
+Aucun</p>
+<p>Retour :
+Une liste de tuples représentant les coordonnées des deux cellules séparées par un mur.
+Exemple du tuple : ((ligne1, colonne1), (ligne2, colonne2))</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_walls(self):
+    &#34;&#34;&#34;
+    Retourne une liste contenant les murs du labyrinthe.
+
+    Argument :
+        Aucun
+
+    Retour :
+      Une liste de tuples représentant les coordonnées des deux cellules séparées par un mur.
+      Exemple du tuple : ((ligne1, colonne1), (ligne2, colonne2))
+    &#34;&#34;&#34;
+    liste_murs=[]
+    for i in range (self.width):
+        for b in range (self.height-1):
+            if (b,i) not in self.neighbors[(b+1,i)]:
+                liste_murs.append([(b,i),(b+1,i)])
+    for b in range (self.height):
+        for i in range (self.width-1):
+            if (b,i) not in self.neighbors[(b,i+1)]:
+                liste_murs.append([(b,i),(b,i+1)])
+    return liste_murs</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.info"><code class="name flex">
+<span>def <span class="ident">info</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p><strong>NE PAS MODIFIER CETTE MÉTHODE</strong>
+Affichage des attributs d'un objet 'Maze' (fonction utile pour deboguer)</p>
+<h2 id="retour">Retour</h2>
+<p>chaîne (string): description textuelle des attributs de l'objet</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def info(self):
+    &#34;&#34;&#34;
+    **NE PAS MODIFIER CETTE MÉTHODE**
+    Affichage des attributs d&#39;un objet &#39;Maze&#39; (fonction utile pour deboguer)
+    Retour:
+        chaîne (string): description textuelle des attributs de l&#39;objet
+    &#34;&#34;&#34;
+    txt = &#34;**Informations sur le labyrinthe**\n&#34;
+    txt += f&#34;- Dimensions de la grille : {self.height} x {self.width}\n&#34;
+    txt += &#34;- Voisinages :\n&#34;
+    txt += str(self.neighbors)+&#34;\n&#34;
+    valid = True
+    for c1 in {(i, j) for i in range(self.height) for j in range(self.width)}:
+        for c2 in self.neighbors[c1]:
+            if c1 not in self.neighbors[c2]:
+                valid = False
+                break
+        else:
+            continue
+        break
+    txt += &#34;- Structure cohérente\n&#34; if valid else f&#34;- Structure incohérente : {c1} X {c2}\n&#34;
+    return txt</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.overlay"><code class="name flex">
+<span>def <span class="ident">overlay</span></span>(<span>self, content=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Rendu en mode texte, sur la sortie standard,
+d'un labyrinthe avec du contenu dans les cellules</p>
+<h2 id="argument">Argument</h2>
+<p>content (dict) : dictionnaire tq content[cell] contient le caractère à afficher au milieu de la cellule</p>
+<h2 id="retour">Retour</h2>
+<p>string</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def overlay(self, content=None):
+    &#34;&#34;&#34;
+    Rendu en mode texte, sur la sortie standard, \
+    d&#39;un labyrinthe avec du contenu dans les cellules
+    Argument:
+        content (dict) : dictionnaire tq content[cell] contient le caractère à afficher au milieu de la cellule
+    Retour:
+        string
+    &#34;&#34;&#34;
+    if content is None:
+        content = {(i, j): &#39; &#39; for i in range(self.height) for j in range(self.width)}
+    else:
+        # Python &gt;=3.9
+        # content = content | {(i, j): &#39; &#39; for i in range(
+        #    self.height) for j in range(self.width) if (i,j) not in content}
+        # Python &lt;3.9
+        new_content = {(i, j): &#39; &#39; for i in range(self.height) for j in range(self.width) if (i, j) not in content}
+        content = {**content, **new_content}
+    txt = r&#34;&#34;
+    # Première ligne
+    txt += &#34;┏&#34;
+    for j in range(self.width - 1):
+        txt += &#34;━━━┳&#34;
+    txt += &#34;━━━┓\n&#34;
+    txt += &#34;┃&#34;
+    for j in range(self.width - 1):
+        txt += &#34; &#34; + content[(0, j)] + &#34; ┃&#34; if (0, j + 1) not in self.neighbors[(0, j)] else &#34; &#34; + content[
+            (0, j)] + &#34;  &#34;
+    txt += &#34; &#34; + content[(0, self.width - 1)] + &#34; ┃\n&#34;
+    # Lignes normales
+    for i in range(self.height - 1):
+        txt += &#34;┣&#34;
+        for j in range(self.width - 1):
+            txt += &#34;━━━╋&#34; if (i + 1, j) not in self.neighbors[(i, j)] else &#34;   ╋&#34;
+        txt += &#34;━━━┫\n&#34; if (i + 1, self.width - 1) not in self.neighbors[(i, self.width - 1)] else &#34;   ┫\n&#34;
+        txt += &#34;┃&#34;
+        for j in range(self.width):
+            txt += &#34; &#34; + content[(i + 1, j)] + &#34; ┃&#34; if (i + 1, j + 1) not in self.neighbors[(i + 1, j)] else &#34; &#34; + \
+                                                                                                             content[
+                                                                                                                 (
+                                                                                                                 i + 1,
+                                                                                                                 j)] + &#34;  &#34;
+        txt += &#34;\n&#34;
+    # Bas du tableau
+    txt += &#34;┗&#34;
+    for i in range(self.width - 1):
+        txt += &#34;━━━┻&#34;
+    txt += &#34;━━━┛\n&#34;
+    return txt</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.remove_wall"><code class="name flex">
+<span>def <span class="ident">remove_wall</span></span>(<span>self, c1, c2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retire un mur entre deux cellules voisines dans le labyrinthe.</p>
+<p>Arguments :
+c1 (tuple) : Coordonnée de la première cellule (ligne, colonne)
+c2 (tuple) : Coordonnée de la deuxième cellule (ligne, colonne)</p>
+<p>Retour :
+Rien</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove_wall(self, c1, c2):
+    &#34;&#34;&#34;
+    Retire un mur entre deux cellules voisines dans le labyrinthe.
+
+    Arguments :
+        c1 (tuple) : Coordonnée de la première cellule (ligne, colonne)
+        c2 (tuple) : Coordonnée de la deuxième cellule (ligne, colonne)
+
+    Retour :
+        Rien
+    &#34;&#34;&#34;
+    assert 0 &lt;= c1[0] &lt; self.height and \
+           0 &lt;= c1[1] &lt; self.width and \
+           0 &lt;= c2[0] &lt; self.height and \
+           0 &lt;= c2[1] &lt; self.width, \
+        f&#34;Erreur lors de la supression d&#39;un mur entre {c1} et {c2} : les coordonnées de sont pas compatibles avec les dimensions du labyrinthe&#34;
+    if c2 not in self.neighbors[c1]:
+        self.neighbors[c1].add(c2)
+    if c1 not in self.neighbors[c2]:
+        self.neighbors[c2].add(c1)</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.solve_bfs"><code class="name flex">
+<span>def <span class="ident">solve_bfs</span></span>(<span>self, start, stop)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcule le parcours le plus court afin d'atteindre la cellule stop à partir de la cellule start. Ici, on utilise
+un parcours en largeur, ce qui signifie que l'algorithme va trouver différents chemins mais on gardera le plus
+cours d'entre eux</p>
+<p>Arguments :
+start (tuple) : La cellule de départ
+stop (tuple) : La cellule d'arrivée
+Retour :
+Nombre minimal de déplacements nécessaires pour aller de start à stop</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def solve_bfs (self, start, stop):
+    &#34;&#34;&#34;
+    Calcule le parcours le plus court afin d&#39;atteindre la cellule stop à partir de la cellule start. Ici, on utilise
+    un parcours en largeur, ce qui signifie que l&#39;algorithme va trouver différents chemins mais on gardera le plus
+    cours d&#39;entre eux
+
+    Arguments :
+         start (tuple) : La cellule de départ
+         stop (tuple) : La cellule d&#39;arrivée
+    Retour :
+         Nombre minimal de déplacements nécessaires pour aller de start à stop
+    &#34;&#34;&#34;
+    parcours = []
+    marque = [start]
+    predecesseurs = {start: start}
+    while marque != []:
+        cell = marque.pop(0)
+        voisins = self.get_reachable_cells(cell)
+        for i in range (len(voisins)):
+            if voisins[i] not in marque and voisins[i] != predecesseurs[cell]:
+                marque.append(voisins[i])
+                predecesseurs[voisins[i]] = cell
+    cell = stop
+    while cell != start:
+        parcours.append(cell)
+        cell = predecesseurs[cell]
+    return parcours</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.solve_dfs"><code class="name flex">
+<span>def <span class="ident">solve_dfs</span></span>(<span>self, start, stop)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calcule le parcours le plus court afin d'atteindre la cellule stop à partir de la cellule start.</p>
+<p>Explication de l'algorithme :
+On utilise ici un parcours en profondeur du labyrinthe. Dans l'initialisation, on choisit la cellule de départ D
+que l'on place dans une pile et que l'on marque. Ensuite on mémorise l'élément prédécesseur de D comme étant D.
+Tant qu'il reste des cellules non marquées : on prend la première cellule (c) de la pile. Si c correspond à
+la cellule A (ou arrivée), on met fin à l'algorithme. Sinon : pour chaque voisine de c, on vérifie si elle
+n'est pas marquée pour l'ajouter dans la pile et enfin mémoriser son prédecesseur comme étant c.</p>
+<p>Arguments :
+start (tuple): La cellule de départ
+stop (tuple): La cellule d'arrivée
+Retour :
+Nombre minimal de déplacements nécessaires pour aller de start à stop</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def solve_dfs(self, start, stop):
+    &#34;&#34;&#34;
+    Calcule le parcours le plus court afin d&#39;atteindre la cellule stop à partir de la cellule start.
+
+    Explication de l&#39;algorithme :
+    On utilise ici un parcours en profondeur du labyrinthe. Dans l&#39;initialisation, on choisit la cellule de départ D
+    que l&#39;on place dans une pile et que l&#39;on marque. Ensuite on mémorise l&#39;élément prédécesseur de D comme étant D.
+    Tant qu&#39;il reste des cellules non marquées : on prend la première cellule (c) de la pile. Si c correspond à
+    la cellule A (ou arrivée), on met fin à l&#39;algorithme. Sinon : pour chaque voisine de c, on vérifie si elle
+    n&#39;est pas marquée pour l&#39;ajouter dans la pile et enfin mémoriser son prédecesseur comme étant c.
+
+    Arguments :
+        start (tuple): La cellule de départ
+        stop (tuple): La cellule d&#39;arrivée
+    Retour :
+        Nombre minimal de déplacements nécessaires pour aller de start à stop
+    &#34;&#34;&#34;
+    parcours=[]
+    marque=[start]
+    predecesseurs={start:start}
+    while marque!=[] :
+        cell=marque.pop(-1)
+        if cell==stop:
+            marque=[]
+        else :
+            temp=self.get_reachable_cells(cell)
+            for i in range (len(temp)):
+                if temp[i] not in marque and temp[i]!=predecesseurs[cell]:
+                    marque.append(temp[i])
+                    predecesseurs[temp[i]]=cell
+    cell = stop
+    while cell != start:
+        parcours.append(cell)
+        cell=predecesseurs[cell]
+    return parcours</code></pre>
+</details>
+</dd>
+<dt id="Maze.Maze.solve_rhr"><code class="name flex">
+<span>def <span class="ident">solve_rhr</span></span>(<span>self, start, stop)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Génère un chemin pour aller de la cellule start à la cellule stop. Ici, on utilise l'algorithme de la main droite
+qui suit la fameuse méthode pour qu'une personne perdue retrouve la sortie d'un labyrinthe : il faut toujours
+longer les murs situés du côté de notre main droite.</p>
+<p>Arguments :
+start (tuple) : La cellule de départ
+stop (tuple) : La cellule d'arrivée
+Retour :
+Nombre minimal de déplacements nécessaires pour aller de start à stop</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def solve_rhr(self, start, stop):
+    &#34;&#34;&#34;
+    Génère un chemin pour aller de la cellule start à la cellule stop. Ici, on utilise l&#39;algorithme de la main droite
+    qui suit la fameuse méthode pour qu&#39;une personne perdue retrouve la sortie d&#39;un labyrinthe : il faut toujours
+    longer les murs situés du côté de notre main droite.
+
+    Arguments :
+         start (tuple) : La cellule de départ
+         stop (tuple) : La cellule d&#39;arrivée
+    Retour :
+         Nombre minimal de déplacements nécessaires pour aller de start à stop
+    &#34;&#34;&#34;
+    parcours = []
+    marque = [start]
+    predecesseurs = {start: start}
+    while marque != []:
+        cell = marque.pop(0)
+        if cell==stop :
+            marque = []
+        voisins = self.get_reachable_cells(cell)
+        for i in range(len(voisins)):
+            if voisins[i] not in marque and voisins[i] != predecesseurs[cell]:
+                marque.append(voisins[i])
+                predecesseurs[voisins[i]] = cell
+    cell = stop
+    while cell != start:
+        parcours.append(cell)
+        cell = predecesseurs[cell]
+    return parcours</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="Maze.getrandbits" href="#Maze.getrandbits">getrandbits</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="Maze.Maze" href="#Maze.Maze">Maze</a></code></h4>
+<ul class="">
+<li><code><a title="Maze.Maze.add_wall" href="#Maze.Maze.add_wall">add_wall</a></code></li>
+<li><code><a title="Maze.Maze.distance_geo" href="#Maze.Maze.distance_geo">distance_geo</a></code></li>
+<li><code><a title="Maze.Maze.distance_man" href="#Maze.Maze.distance_man">distance_man</a></code></li>
+<li><code><a title="Maze.Maze.empty" href="#Maze.Maze.empty">empty</a></code></li>
+<li><code><a title="Maze.Maze.fill" href="#Maze.Maze.fill">fill</a></code></li>
+<li><code><a title="Maze.Maze.gen_btree" href="#Maze.Maze.gen_btree">gen_btree</a></code></li>
+<li><code><a title="Maze.Maze.gen_exploration" href="#Maze.Maze.gen_exploration">gen_exploration</a></code></li>
+<li><code><a title="Maze.Maze.gen_fusion" href="#Maze.Maze.gen_fusion">gen_fusion</a></code></li>
+<li><code><a title="Maze.Maze.gen_sidewinder" href="#Maze.Maze.gen_sidewinder">gen_sidewinder</a></code></li>
+<li><code><a title="Maze.Maze.gen_wilson" href="#Maze.Maze.gen_wilson">gen_wilson</a></code></li>
+<li><code><a title="Maze.Maze.get_contiguous_cells" href="#Maze.Maze.get_contiguous_cells">get_contiguous_cells</a></code></li>
+<li><code><a title="Maze.Maze.get_reachable_cells" href="#Maze.Maze.get_reachable_cells">get_reachable_cells</a></code></li>
+<li><code><a title="Maze.Maze.get_walls" href="#Maze.Maze.get_walls">get_walls</a></code></li>
+<li><code><a title="Maze.Maze.info" href="#Maze.Maze.info">info</a></code></li>
+<li><code><a title="Maze.Maze.overlay" href="#Maze.Maze.overlay">overlay</a></code></li>
+<li><code><a title="Maze.Maze.remove_wall" href="#Maze.Maze.remove_wall">remove_wall</a></code></li>
+<li><code><a title="Maze.Maze.solve_bfs" href="#Maze.Maze.solve_bfs">solve_bfs</a></code></li>
+<li><code><a title="Maze.Maze.solve_dfs" href="#Maze.Maze.solve_dfs">solve_dfs</a></code></li>
+<li><code><a title="Maze.Maze.solve_rhr" href="#Maze.Maze.solve_rhr">solve_rhr</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
